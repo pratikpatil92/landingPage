@@ -1,0 +1,338 @@
+.mycontainer{
+    /* border: red solid 1px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  a, .active .btn {
+      transition: all 300ms ease;
+  }
+
+/* Desktop Nav */
+nav, .nav-links{
+    display: flex;
+}
+
+nav{
+  position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    top: 0;
+}
+
+.nav-links{
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3748C2;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #3748C2;
+}
+.active{
+  color: #3748C2;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #3748C2;
+}
+
+.active:hover{
+    color: #3748C2;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #3748C2;
+
+}
+
+/* Hamburger Menu */
+
+#hamburger-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all .3s ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color:#fff;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+    
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+  }
+
+  .menu-links .active{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: gray;
+  }
+  
+  .menu-links li {
+    list-style: none;
+  }
+  
+  .menu-links.open {
+    max-height: 300px;
+  }
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+  }
+  
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+  
+  .hamburger-icon span:first-child {
+    opacity: 1;
+  }
+  
+  .hamburger-icon span:first-child {
+    transform: none;
+  }
+
+  /* banner */
+  .banner {
+    height: 35rem; /* Adjust the height as needed */
+    position: relative;
+    color: white; /* Text color on top of the background image */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px); /* Add blur effect */
+    background-image: url("/banner.jpeg");
+  }
+
+  .banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity value (0.5 for 50% opacity) */
+    z-index: 1; /* Ensure the overlay is above the background image */
+  }
+
+  .banner .banner-content {
+      width: 100%;
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .banner .banner-content h2{
+      color: #fff;
+      font-size: 5rem;
+  }
+
+  .banner .banner-content p{
+    color: #fff;
+    font-size: 2rem;
+}
+.banner .banner-content .contact-btn{
+    margin-top: 2rem;
+}
+
+/* why choose us */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .feature {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.4s ease-in-out; /* Add transition for hover effect */
+    width: 300px; /* Initial width for desktop */
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px); /* Add a subtle hover effect */
+  }
+  
+  
+  .icon {
+    color: #4CAF50; /* Green color for the checkmark icon */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .text {
+    transition: opacity 0.3s ease-in-out; /* Add transition for fade-in effect */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #666;
+  }
+
+
+
+  /* 2xl */
+@media (max-width: 1536px) {
+    .mycontainer {
+      max-width: 1280px;
+    }
+  }
+  
+  /* xl */
+  @media (max-width: 1280px) {
+    .mycontainer {
+      max-width: 1024px;
+    }
+  }
+  
+  /* lg */
+  @media (max-width: 1024px) {
+    .mycontainer {
+      max-width: 768px;
+    }
+    #desktop-nav{
+          display: none;
+      }
+      #hamburger-nav{
+          display: flex;
+      }
+      .arrow{
+          display: none;
+      }
+  }
+  
+  /* md */
+  @media (max-width: 768px) {
+    .mycontainer {
+      max-width: 640px;
+    }
+    .header-container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .about-content{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .about-img{
+      width: 60%;
+    }
+    .about-img img{
+      height: 400px;
+    }
+    .about-description{
+        width: 100%;
+    }
+    .about-description-detail{
+        justify-content: center;
+    }
+  }
+  
+  /* sm */
+  @media (max-width: 640px) {
+    .mycontainer {
+      max-width: 475px;
+    }
+    .about-img{
+      display: none;
+    }
+    .about-content{
+        margin-top: 2rem;
+    }
+    
+  }
+  
+  /* xs */
+  @media (max-width: 475px) {
+    .mycontainer {
+      width: 100%;
+    }
+    .about-section{
+    margin-top: 20%;
+  }
+    .about-description{
+        width: 70%;
+    }
+    .about-content{
+        margin-top: 2rem;
+    }
+    .about-img{
+        display: none;
+    }
+    .about-description{
+        text-align: center;
+    }
+    .experience-container{
+    margin-top: 20%;
+  }
+  }
