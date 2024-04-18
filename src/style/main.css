@@ -208,7 +208,7 @@ a:hover{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: left;
+    text-align: center;
     transition: transform 0.4s ease-in-out; /* Add transition for hover effect */
     width: 300px; /* Initial width for desktop */
   }
@@ -220,11 +220,14 @@ a:hover{
   
   .icon {
     color: #4CAF50; /* Green color for the checkmark icon */
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
   }
   .text {
     transition: opacity 0.3s ease-in-out; /* Add transition for fade-in effect */
+    text-align: center;
   }
   
   h2 {
@@ -237,6 +240,19 @@ a:hover{
   
   p {
     color: #666;
+  }
+
+  /* about us */
+
+  .aboutUsImg img{
+    width: 100%;
+    height: fit-content;
+
+  }
+
+  .aboutUsImg{
+      display: flex;
+      justify-content: center;
   }
 
 
@@ -276,26 +292,13 @@ a:hover{
     .mycontainer {
       max-width: 640px;
     }
-    .header-container{
-        flex-direction: column;
-        gap: 3rem;
+    .banner .banner-content h2{
+        font-size: 3rem;
     }
-    .about-content{
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .about-img{
-      width: 60%;
-    }
-    .about-img img{
-      height: 400px;
-    }
-    .about-description{
-        width: 100%;
-    }
-    .about-description-detail{
-        justify-content: center;
-    }
+  
+    .banner .banner-content p{
+      font-size: 1rem;
+  }
   }
   
   /* sm */

@@ -9,7 +9,7 @@ export default function HomePage() {
             <div className="container banner-content">
                 <h2>TriColab Technology</h2>
                 <p>Solutions that scale with your ambition</p>
-                <div class="contact-btn">
+                <div className="contact-btn">
 
                     <Button variant="contained">Contact Us</Button>
                 </div>
