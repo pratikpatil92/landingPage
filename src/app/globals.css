@@ -10,10 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-p {
-  color: rgb(85, 85, 85);
-}
-
 .main{
   margin-top: 9%;
+  /* margin-bottom: 15%; */
 }

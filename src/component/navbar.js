@@ -3,16 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { menu } from '@/content/content';
 
 export default function Navbar() {
     const router = usePathname();
     console.log(router)
-    const menu = [
-        { label: "Home", path: "/" },
-        { label: "About", path: "/about" },
-        { label: "Services", path: "/services" },
-        { label: "Contact us", path: "/contact_us" },
-    ];
+
 
     const toggle = () => {
         const menuLinks = document.querySelector('.menu-links');
